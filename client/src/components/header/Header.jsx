@@ -4,7 +4,6 @@ import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
 
 
-
 export default function Header(){
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -58,7 +57,7 @@ export default function Header(){
               </NavLink>
 
               <NavLink
-                to=""
+                to="/logout"
                 className={({isActive}) => `text-sm font-semibold leading-6 text-gray-900${isActive ? ' underline': ''}`}              >
                 Logout
               </NavLink>
@@ -131,7 +130,7 @@ export default function Header(){
                       Creacte recipes
                     </Link>
                     <Link
-                      to="/articles"
+                      to="/logout"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       Logout
