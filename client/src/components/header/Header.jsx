@@ -43,29 +43,44 @@ export default function Header(){
               >
                 Home
               </NavLink>
+
               <NavLink
-                to="/about"
+                to=""
                 className={({isActive}) => `text-sm font-semibold leading-6 text-gray-900${isActive ? ' underline': ''}`}
               >
-                About
+                All recipes
               </NavLink>
+
               <NavLink
-                to="/pricing"
+                to=""
                 className={({isActive}) => `text-sm font-semibold leading-6 text-gray-900${isActive ? ' underline': ''}`}              >
-                Pricing
+                Creacte recipes
               </NavLink>
+
               <NavLink
-                to="/articles"
+                to=""
                 className={({isActive}) => `text-sm font-semibold leading-6 text-gray-900${isActive ? ' underline': ''}`}              >
-                Articles
+                Logout
+              </NavLink>
+
+              <NavLink
+                to=""
+                className={({isActive}) => `text-sm font-semibold leading-6 text-gray-900${isActive ? ' underline': ''}`}              >
+                Register
+              </NavLink>
+
+              <NavLink
+                to=""
+                className={({isActive}) => `text-sm font-semibold leading-6 text-gray-900${isActive ? ' underline': ''}`}              >
+                Login
               </NavLink>
 
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
-          </div>
+          </div> */}
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
@@ -107,30 +122,38 @@ export default function Header(){
                       to="/about"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
-                      About
+                      All recipes
                     </Link>
                     <Link
                       to="/pricing"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
-                      Pricing
+                      Creacte recipes
                     </Link>
                     <Link
                       to="/articles"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
-                      Articles
+                      Logout
                     </Link>
+
+                    <Link
+                      to="/articles"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      Login
+                    </Link>
+
+                    <Link
+                      to="/articles"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      Register
+                    </Link>
+                    
                 
                 </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
-                </div>
+                
               </div>
             </div>
           </DialogPanel>
