@@ -52,7 +52,7 @@ export default function Header(){
               </NavLink>
 
               <NavLink
-                to=""
+                to="/recipes/create"
                 className={({isActive}) => `text-sm font-semibold leading-6 text-gray-900${isActive ? ' underline': ''}`}              >
                 Creacte recipes
               </NavLink>
@@ -125,7 +125,7 @@ export default function Header(){
                       All recipes
                     </Link>
                     <Link
-                      to="/pricing"
+                      to="/recipes/create"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       Creacte recipes
