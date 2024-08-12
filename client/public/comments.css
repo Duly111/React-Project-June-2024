@@ -1,0 +1,94 @@
+
+
+.create-comment>.form>textarea {
+    resize: none;
+    width: auto;
+    height: 150px;
+    margin-top: 22px;
+    margin-bottom: 28px;
+    padding: 5px;
+}
+
+.details-comments {
+    display: table-cell;
+}
+
+.create-comment {
+    margin: auto;
+    margin-top: 70px;
+    position: relative;
+    text-align: center;
+    width: 700px;
+    height: auto;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #6f5d9c;
+    box-shadow: 0px 0px 32px 0px #32485e, -14px -14px 20px #191c21;
+}
+
+.create-comment>label {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.info-section>.details-comments li {
+    width: 400px;
+    display: inline-block;
+    position: static;
+    margin: 20px auto 25px auto;
+    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 16px;
+    margin-left: 60px;
+    background: #6f5d9c;
+    color: white;
+}
+
+.comment p {
+    padding: 16px;
+}
+
+
+.create-comment>.button:hover {
+    background-color: #41425c;
+    color: white;
+    cursor: pointer;
+}
+
+.comment-textarea {
+    width: 100%; /* Задава ширината на 100% от наличния контейнер */
+    height: 200px; /* Увеличава височината на текстовото поле */
+    padding: 10px; /* Вътрешно разстояние за удобство */
+    border-radius: 4px; /* Закръгля ръбовете */
+    border: 1px solid #ccc; /* Граница около текстовото поле */
+    font-size: 16px; /* Размер на шрифта */
+    resize: none; /* Предотвратява промяна на размера от потребителя */
+  }
+
+
+  .btn.submit {
+    margin-top: 30px;
+    background: #778e9c;
+    height: 60px;
+    border-radius: 20px;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+}
+
+label, input {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+

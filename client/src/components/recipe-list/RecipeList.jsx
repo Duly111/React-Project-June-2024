@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function RecipeList() {
     return (
         <div className="relative isolate overflow-hidden bg-white py-16 sm:py-24 lg:py-32">
@@ -9,12 +11,13 @@ export default function RecipeList() {
                 Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis. Duis tempor incididunt dolore.
               </p>
               <div className="mt-6 flex justify-center max-w-md gap-x-4">
-                <button
+                <Link
+                    to={'/recipe/details'}
                   type="submit"
                   className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                 >
                   Details
-                </button>
+                </Link>
               </div>
             </div>
           </div>

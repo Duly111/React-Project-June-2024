@@ -6,6 +6,7 @@ import Login from "./components/login/Login"
 import Register from './components/register/Register'
 import RecipeCreate from './components/recipe-create/RecipeCreate'
 import RecipeList from './components/recipe-list/RecipeList'
+import RecipeDetails from './components/recipe-details/GameDetails'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <Route path='/login' element={ <Login/>}/>
             <Route path='/register' element={<Register/>}/>
             <Route path='/recipe' element={<RecipeList/>}/>
+            <Route path='/recipe/details' element={<RecipeDetails/>}/>
             <Route path='/recipes/create' element={<RecipeCreate/>}/>
         </Routes>
       </main>
