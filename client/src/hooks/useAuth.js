@@ -1,4 +1,4 @@
-import { login } from "../api/auth-api";
+import { login, register } from "../api/auth-api";
 import { useAuthContext } from "../context/AuthContext"
 
 export const useLogin = () =>{
@@ -11,4 +11,17 @@ export const useLogin = () =>{
         return authData;
     }
     return loginHendler
+}
+
+export const useRegister = () =>{
+    const {changeAuthState} = useAuthContext();
+
+    const registerHendler = async (email,password) =>{
+        const {password: _, ...authData} = await register(email,password);
+
+        changeAuthState(authData);
+        return authData;
+    }
+
+    return registerHendler;
 }
