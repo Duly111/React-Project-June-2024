@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function RecipeDetails(){
     return(
         <section id="game-details">
@@ -32,7 +34,7 @@ export default function RecipeDetails(){
             </div>
 
             <div className="buttons">
-                <a href="#" className="button">Edit</a>
+                <Link href="" className="button">Edit</Link>
                 <a href="#" className="button">Delete</a>
             </div>
         </div>
