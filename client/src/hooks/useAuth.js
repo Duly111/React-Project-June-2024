@@ -1,17 +1,33 @@
-import { login, logout, register } from "../api/auth-api";
+import { logout, register } from "../api/auth-api";
 import { useAuthContext } from "../context/AuthContext"
 
-export const useLogin = () =>{
-    const {changeAuthState} = useAuthContext();
+// export const useLogin = () =>{
+//     const {changeAuthState} = useAuthContext();
     
-    const loginHendler = async (email,password) =>{
-        const {password: _, ...authData} = await login(email,password);
+//     const loginHendler = async (email,password) =>{
+//         const {password: _, ...authData} = await login(email,password);
 
-        changeAuthState(authData)
+//         changeAuthState(authData)
+//         return authData;
+//     }
+//     return loginHendler
+// }
+
+
+import { login as loginService } from "../api/auth-api"; // Правилно място на импорта
+
+export const useLogin = () => {
+    const { changeAuthState } = useAuthContext();
+    
+    const loginHandler = async (email, password) => {
+        const authData = await loginService(email, password);
+        changeAuthState(authData);
         return authData;
-    }
-    return loginHendler
-}
+    };
+    
+    return loginHandler;
+};
+
 
 export const useRegister = () =>{
     const {changeAuthState} = useAuthContext();

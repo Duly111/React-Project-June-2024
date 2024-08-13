@@ -14,7 +14,7 @@ export function useForm(initialValues,submitCallBack){
         }))
     }
 
-    const submitHedler = async (e) =>{
+    const submitHendler = async (e) =>{
         e.preventDefault();
         await submitCallBack(values);
         setValues(initialValues);
@@ -23,6 +23,6 @@ export function useForm(initialValues,submitCallBack){
     return{
         values,
         changeHendler,
-        submitHedler,
+        submitHendler,
     }
 }

@@ -1,10 +1,9 @@
-export const getAccessToken = () =>{
+export const getAccesToken = () =>{
     const authJSON = localStorage.getItem('auth');
 
     if(!authJSON){
-        return "";
+        return '';
     }
-
     const authData = JSON.parse(authJSON);
 
     return authData?.accessToken;
