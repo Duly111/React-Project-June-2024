@@ -11,13 +11,13 @@ export const getAll = async () => {
 };
 
 
-export const getOne = (gameId) => request.get(`${BASE_URL}/${gameId}`);
+export const getOne = (recipeId) => request.get(`${BASE_URL}/${recipeId}`);
 
-export const create = (gameData) =>  request.post(`${BASE_URL}`,gameData);
+export const create = (recipeData) =>  request.post(`${BASE_URL}`,recipeData);
 
-export const remove = (gameId) => request.del(`${BASE_URL}/${gameId}`);
+export const remove = (recipeId) => request.del(`${BASE_URL}/${recipeId}`);
 
-export const update = (gameId,gameData) => request.put(`${BASE_URL}/${gameId}`,gameData);
+export const update = (recipeId,recipeData) => request.put(`${BASE_URL}/${recipeId}`,recipeData);
 
 const recipesAPI = {
     getAll,

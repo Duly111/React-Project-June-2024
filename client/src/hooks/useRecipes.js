@@ -29,4 +29,10 @@ export function useGetOneRecipes(recipeId){
     return [recipe,setRecipe];
 }
 
+export function useCreateRecipe(){
+    const recipeCreateHendler = (recipeData) => recipesAPI.create(recipeData);
+
+    return recipeCreateHendler;
+}
+
 

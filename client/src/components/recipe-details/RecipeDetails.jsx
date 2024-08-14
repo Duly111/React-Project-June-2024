@@ -3,6 +3,7 @@ import { useCreateComment, useGetAllComments } from "../../hooks/useComments";
 import { useGetOneRecipes } from "../../hooks/useRecipes";
 import { useAuthContext } from "../../context/AuthContext";
 import { useForm } from "../../hooks/useForm";
+import recipesAPI from "../../api/recipes-api";
 
 const initialValues = {
     comment: '',
@@ -31,6 +32,22 @@ export default function RecipeDetails(){
         }
     })
 
+    const recipeDeleteHendler = async () =>{
+        const isConfirm = confirm(`Are you sure you want do update ${recipe.name} game??`);
+        
+        if(!isConfirm){
+            return
+        }
+
+        try {
+            recipesAPI.remove(recipeId);
+            navigate('/');
+        } catch (error) {
+            console.log(error.message);
+        }
+        
+    }
+
     const isOwner = userId  === recipe._ownerId;
 
     return(
@@ -42,17 +59,17 @@ export default function RecipeDetails(){
                 <img className="game-img" src={recipe.img} />
                 <h1>{recipe.name}</h1>
             </div>
-
+            <h3 style={{ fontWeight: 'bold' }}>Ingredients:</h3>
             <p className="text">
                 {recipe.ingredients}
             </p>
-
+            <h3 style={{ fontWeight: 'bold', paddingLeft: '60px' }}>Steps</h3>
             <p className="text">
                 {recipe.steps}
             </p>
 
-            <div className="details-comments">
-                <h2>Comments:</h2>
+            <div className="details-comments ">
+                <h2 style={{ fontWeight: 'bold', paddingLeft: '60px' }}>Comments:</h2>
                 <ul>
                     {comments.map(comment =>(
                         <li key={comment._id} className="comment">
@@ -64,8 +81,8 @@ export default function RecipeDetails(){
             </div>
             {(isOwner &&
                 <div className="buttons">
-                    <Link href="" className="button">Edit</Link>
-                    <a href="#" className="button">Delete</a>
+                    <Link to={`/recipe/${recipeId}/edit`} className="button">Edit</Link>
+                    <a href="#" onClick={recipeDeleteHendler} className="button">Delete</a>
                 </div>
             )}
            
