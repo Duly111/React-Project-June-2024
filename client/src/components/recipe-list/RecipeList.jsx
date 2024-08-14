@@ -10,7 +10,7 @@ export default function RecipeList() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex justify-center items-center mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
             <div className="max-w-xl lg:max-w-lg text-center">
-              <h1 className="text-3xl font-bold tracking-tight text-black text-center sm:text-4xl mx-">
+              <h1 className="text-3xl font-bold tracking-tight text-black text-center sm:text-4xl mx-" style={{ color: '#6366F1'}}>
                 All Recipes
               </h1>
 

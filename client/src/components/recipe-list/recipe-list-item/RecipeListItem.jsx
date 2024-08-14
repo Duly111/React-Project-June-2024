@@ -6,7 +6,7 @@ export default function RecipeListItem({
     img,
 }) {
     return (
-        <div>
+        <div style={{padding: '20px'}}>
             <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">{name}</h2>
             <img src={img} alt={name} /> {/* Добави alt текст за достъпност */}
             <div className="mt-6 flex justify-center max-w-md gap-x-4">
