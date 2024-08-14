@@ -60,9 +60,6 @@ export default function Login(){
                     <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
                         Password
                     </label>
-                    <div className="text-sm">
-                       
-                    </div>
                     </div>
                     <div className="mt-2">
                     <input
@@ -88,7 +85,7 @@ export default function Login(){
                     </button>
                 </div>
                 </form>
-                {error && <div className="error-message">{error}</div>}
+                {error && <div style={{fontSize: '20px' , color: 'red'}}>{error}</div>}
                 <p className="mt-10 text-center text-sm text-gray-500">
                 Don't have an account?
                 <Link to="/register" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">

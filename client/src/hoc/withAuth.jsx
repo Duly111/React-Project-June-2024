@@ -1,6 +1,5 @@
 import { useAuthContext } from "../context/AuthContext";
 
-
 export default function withAuth(Component){
     const ComponentWrapper = (props) =>{
         const authContext = useAuthContext();

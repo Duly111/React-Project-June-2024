@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from 'react'
 
 export function useForm(initialValues,submitCallBack){
-    const [values,setValues] = useState(initialValues);
-
+    const [values,setValues] = useState(initialValues); 
+    
     useEffect(() =>{
         setValues(initialValues);
-    },[initialValues])
+    }, [initialValues])
 
     const changeHendler = (e) =>{
         setValues(state => ({
@@ -20,7 +20,7 @@ export function useForm(initialValues,submitCallBack){
         setValues(initialValues);
     }
 
-    return{
+    return {
         values,
         changeHendler,
         submitHendler,
