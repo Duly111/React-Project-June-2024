@@ -11,6 +11,7 @@ import Logout from './components/logout/Logout'
 import { AuthContextProvider } from './context/AuthContext'
 import RecipeEdit from './components/recipe-edit/RecipeEdit'
 import NotFound from './components/not-found/NotFound'
+import Newsletter from './components/newsletter/Newsletter'
 
 function App() {
 
@@ -28,9 +29,9 @@ function App() {
             <Route path='/recipe/:recipeId/details' element={<RecipeDetails/>}/>
             <Route path='//recipe/:recipeId/edit' element={<RecipeEdit/>}/>
             <Route path='/recipes/create' element={<RecipeCreate/>}/>
-            {/* <Route path='/not-found' element={<NotFound/>}/> */}
             <Route path='/*' element={<NotFound/>}/>
             <Route path='/logout' element={<Logout/>}/>
+            <Route path='/newsletter' element={<Newsletter/>}/>
 
         </Routes>
       </main>
